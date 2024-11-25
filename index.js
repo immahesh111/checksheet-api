@@ -12,7 +12,7 @@ connectToDatabase()
 
 const app = express()
 app.use(cors({
-    origin: "https://checksheet-frontend.vercel.app/",
+    origin: "https://checksheet-frontend.vercel.app",
     credentials:true
 }))
 app.use(express.json())
