@@ -15,6 +15,8 @@ app.use(cors({
     origin: "https://checksheet-frontend.vercel.app",
     credentials:true
 }))
+// Handle preflight requests
+app.options('*', cors()); // Allow preflight for all routes
 app.use(express.json())
 app.use(express.static('public/uploads'))
 app.use('/api/auth',authRouter)
